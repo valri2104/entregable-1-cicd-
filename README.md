@@ -16,7 +16,9 @@
 
 ## Ejecución exitosa del workflow
 
-🔗 Enlace a la ejecución: _pendiente_
+🔗 Enlace a la ejecución exitosa: https://github.com/valri2104/entregable-1-cicd-/actions/runs/42436497839
+
+En los logs del job `imprimir_info` se ven el saludo ("Hola, soy Valeria Cardona Urrea y este es mi primer workflow!"), la fecha/hora del runner y la salida del script (`Autor: Valeria Cardona Urrea`, `Sistema Operativo: Linux ...` y la fecha/hora desde Python).
 
 ---
 
