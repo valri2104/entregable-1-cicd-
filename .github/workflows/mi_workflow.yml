@@ -1,0 +1,31 @@
+name: Entregable 1 - Mi Primer Workflow CICD
+
+on:
+  push: # Evento al subir cambios a main
+    branches:
+      - main
+  workflow_dispatch: # Ejecución manual desde la pestaña Actions
+
+permissions:
+  contents: read
+
+jobs:
+  imprimir_info:  # No cambies este nombre, lo usaremos para evaluar
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7  # Este paso clona tu repositorio. No lo modifiques.
+
+      - name: Imprimir Mensaje Personalizado
+        shell: bash
+        run: |
+          echo "Hola, soy Valeria Cardona Urrea y este es mi primer workflow!"
+          echo "La fecha y hora actual es: $(date)"
+
+      - name: Configurar Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+
+      - name: Ejecutar script Python
+        run: python mi_script.py
